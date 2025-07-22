@@ -3,12 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+    table, th, td 
+    {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: lightgray;
+    }
+    span
+    {
+    color: rgb(255, 127, 127);
+    }
+    </style>
+    <title>U1-S1-G2</title>
 </head>
 <body>
-    <h1>eufrejghdfjhb</h1>
-    <h3>
-        sdjfnsdjk
-    </h3>
+
+<header>
+<!-- la tabella si comporta come un inline, manda a capo quello che c`è dopo--> 
+ <!-- th sta per theading e allinea al centro col grassetto il contenuto -->
+  <!-- tr sta per trow -->
+
+    <h1> codice per la lezione <span>del G2 S1</span> </h1>
+
+
+<nav> 
+    <a href="https://www.youtube.com/watch?v=-Kwm4APJtiU">youtube</a>|<a href="https://developer.mozilla.org/en-US/">mdn</a>
+</nav>
+
+</header>
+    
+<main>
+
+<section>
+    <h2> Tabelle</h2>
+    <div>
+        <p>qui impariamo a usare le tabelle</p>
+        <p>sono molto importanti</p>
+    </div>
+    
+    <table>
+        <!-- CAPTION FACOLTATIVO -->
+        <caption>Registro presenze </caption> 
+        
+        <!-- Se c`è intestazione allora inserire thead -->
+        <thead>
+            <tr>
+                <th>nome</th>
+                <th>anno</th>
+                <th>presenze</th>
+            </tr>    
+        </thead>
+        
+        <!-- thead tbody tfoot sono tag semantici -->
+        <tbody>
+        <tr>
+        <td>luca</td>     
+        <td>2020</td>   
+        <td>6</td>
+        </tr>
+        <tr>
+        <td>luca</td>     
+        <td>2020</td>   
+        <td>6</td>
+        </tr>
+        <tr>
+        <td>luca</td>     
+        <td>2020</td>   
+        <td>6</td>
+        </tr>
+        </tbody>
+        
+        <tfoot>
+            <td colspan="2">totale studenti</td>
+            <td>3</td>
+            <!-- colspan unisce le colonne,la somma deve 
+             essere uguale al numero di celle delle altre righe  -->
+        </tfoot>
+</table>
+
+</section>
+
+<hr/>
+
+<section>
+
+<h2>Form</h2>
+<!-- action indica la destinazione una volta inviato il form -->
+<!-- l-attributo get espone i nostri dati una volta inviati ma non ha limite -->
+<form action="answer.html" method="get" >
+    
+<article>
+    
+        <fieldset>
+            <legend>Form registrazione</legend>
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="name" placeholder="inserisci nome"/>
+            <label for="surname">Cognome</label>
+            <input type="text" name="surname" id="surname" placeholder="inserisci cognome"/>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="inserisci email"/>  
+            <label for="password" >Password</label>
+            <input type="password" name="password" id="password" placeholder="crea password"
+            maxlength="25" minlength="8"/>
+            <br/>
+            <br/>
+            <label for="message" id="message">Commento</label>
+            <textarea id="message" name="message" placeholder="inserisci">lascia un messaggio</textarea>
+            
+       
+        </fieldset>
+</article> 
+<article>
+        <fieldset>
+            <legend> Preferenze</legend>
+            <p>materie scelte</p>
+            
+           
+            <input type="checkbox"  name="css"/>
+            <label for="css"> css</label>
+            <br>
+            <br>
+            <input type="checkbox" id="html" name="html"/>
+            <label for="html"> html</label>
+            <br>
+            <br>
+            <input type="checkbox" id="angular" name="angular"/>
+            <label for="angular" > angular</label>
+            <br>
+            <br>
+            <input type="checkbox" id="html" name="html"/>
+            <label for="html" > html</label>
+</article>
+<!-- il value mi da in risposta il valore della mia scelta -->
+<!-- nel type radio devo mantenere lo stesso Name -->
+ <article>
+            <p>tipo di frequenza</p>
+            <input type="radio" name="frequenza" id="part" value="part"/>
+            <label for="part" >parttime</label>
+            <br>
+            <br>
+            <input type="radio" name="frequenza" id="serale" value="serale"/>
+            <label for="part" >serale</label>
+            <br>
+        </br>
+            <input type="radio" name="frequenza" id="full" value="full"/>
+            <label for="full" >full</label>
+            <br>
+            <label for="title">Titolo di studio</label> 
+        </br>
+ </article>
+ <article>
+            <select name="title" id="title">
+                <!-- prima solitamente vuota per estetica  -->
+                <option></option>
+                <option value="diploma">diploma</option>
+                <option value="laureatri">laurea tri</option>
+                <option value="nessuno">nessuno</option>
+            </select>
+        </fieldset>
+</article>
+        <button type="submit" id="send">Invia</button>
+        <button type="reset" id="reset">Reset</button>
+        <!-- qui l`id non ha funzione ma si userà in futuro -->
+</form>
+
+</section>
+
+</main>
+
+
+</br>
+</br>
+
+<aside>
+        <!-- poco usato iframe perche rischio hacker -->
+<article>
+        <iframe src="https://www.repubblica.it/" width="500" height="500"></iframe>
+</article>
+</br>
+</br>
+<article>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-Kwm4APJtiU?si=jSm1QaugFS63-a7o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</article>
+</hr>
+
+</aside>
+        <!-- span è l`unico contenitore in-line -->
+        <!-- div è un contenitore di tipo blocco, manda a capo -->
+<hr>
+<footer>
+    <address>
+        azienda xy <br>
+        via bim bum bam <br>
+        6464664 <br>
+    </address>
+    <div>
+    <a href="javascript:void(0)">privacy poly</a>
+    <a href="javascript:void(0)">INFO COOCKIE</a>
+    </div>
+    <!-- uso i div nelle situazioni non standard e non semantiche-->
+<!-- uso i cont semantici su qualcosa inerente al "significato della pagina" -->
+</footer>
+
+<!-- 
+REGOLE SEMANTICHE: 
+ 1 SOLA HEADER 
+ 1 SOLO MAIN 
+ NAV EL DI NAVIGAZIONE NON TUTTI I LINK SONO IN NAV, ESSO È IL LINK IN TESTATA
+ 1 SOLO FOOTER
+ -->
+
 </body>
 </html>
